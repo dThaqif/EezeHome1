@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Search</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+
+ <ion-label>Categories</ion-label>
+  <ion-select [(ngModel)]="Categories" multiple="true" #categories>
+    <ion-option>House</ion-option>
+    <ion-option>Apartments</ion-option>
+    <ion-option>Commercial Properties</ion-option>
+    <ion-option>Land</ion-option>
+  </ion-select>
+
+  <button ion-button (click) = "openIt(categories)">Categories</button>
+  
+   
+</ion-content>
