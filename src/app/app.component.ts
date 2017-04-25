@@ -10,6 +10,7 @@ import { LoginPage } from '../pages/login/login';
 import { LocationPage } from '../pages/location/location';
 import { SearchPage } from '../pages/search/search';
 import { AgentPage } from '../pages/agent/agent';
+import { AccountPage } from '../pages/account/account';
 
 @Component({
   templateUrl: 'app.html'
@@ -30,7 +31,9 @@ export class MyApp {
       { title: 'Login', component: LoginPage },
       { title: 'Location', component: LocationPage },
       { title: 'Properties', component: SearchPage },
-      { title: 'List of Agent', component: AgentPage }
+      { title: 'List of Agent', component: AgentPage },
+      { title: 'My Account', component: AccountPage }
+
 
     ];
 

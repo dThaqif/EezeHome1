@@ -11,6 +11,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { LocationPage } from '../pages/location/location';
 import { AgentPage } from '../pages/agent/agent';
+import { AccountPage } from '../pages/account/account';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,7 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     LoginPage,
     LocationPage,
-    AgentPage
+    AgentPage,
+    AccountPage
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     LoginPage,
     LocationPage,
-    AgentPage
+    AgentPage,
+    AccountPage
     
   ],
   providers: [
