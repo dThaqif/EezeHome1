@@ -7,17 +7,17 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'search.html'
 })
 export class SearchPage {
-  
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   }
 
-ionViewWillLoad() {
+  ionViewWillLoad() {
     console.log('ionViewDidLoad About');
-}
-
-  openIt(categories) {
-    categories.open();
   }
+
+
+
+
 
 }
