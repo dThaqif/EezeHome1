@@ -12,6 +12,7 @@ import { SearchPage } from '../pages/search/search';
 import { AgentPage } from '../pages/agent/agent';
 import { AccountPage } from '../pages/account/account';
 
+
 @Component({
   templateUrl: 'app.html'
 })
