@@ -3,18 +3,19 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
-
+import { Location } from '../providers/location';
+import { User } from '../providers/user';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 import { AboutPage } from '../pages/about/about';
 import { SearchPage } from '../pages/search/search';
-import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { LocationPage } from '../pages/location/location';
 import { AgentPage } from '../pages/agent/agent';
 import { AccountPage } from '../pages/account/account';
+
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -26,7 +27,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     AboutPage,
     SearchPage,
-    TabsPage,
     LoginPage,
     LocationPage,
     AgentPage,
@@ -35,19 +35,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp,{
-      tabsPlacement: 'bottom',
-	  platforms: {
-		android: {
-		  tabsPlacement: 'top'
-		},
-		ios: {
-		  tabsPlacement: 'top'
-		},
-		windows:
-		{
-		  tabsPlacement: 'top'
-		}
-	  }
+      
     }),
   ],
   bootstrap: [IonicApp],
@@ -56,7 +44,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     AboutPage,
     SearchPage,
-    TabsPage,
     LoginPage,
     LocationPage,
     AgentPage,
@@ -68,6 +55,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SplashScreen,
     GoogleMaps,
     Geolocation,
+    User,
+    Location,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
