@@ -11,6 +11,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class Location {
 
+
   constructor(public http: Http) {
     console.log('Hello Location Provider');
   }

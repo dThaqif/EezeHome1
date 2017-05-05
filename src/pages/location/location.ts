@@ -17,16 +17,21 @@ import { Geolocation } from '@ionic-native/geolocation';
 })
 export class LocationPage {
   map: GoogleMap;
-  location = new LatLng(3.158800,101.757446);
+  location = new LatLng(3.046734, 101.688589);
+ 
 
   constructor(public navCtrl: NavController, public platform: Platform, private geolocation: Geolocation) {
     platform.ready().then(() => {
       this.loadMap();
-    });
-  }
+    });}
+
+    ngAfterViewInit(){
+      this.loadMap();
+    }
 
   loadMap() {
-    
+
+
     this.map = new GoogleMap('map', {
       'backgroundColor': 'white',
       'controls': {
@@ -44,22 +49,33 @@ export class LocationPage {
       'camera': {
         'latLng': this.location,
         'tilt': 30,
-        'zoom': 15,
-        'bearing': 50
+        'zoom': 15
+
       }
     });
 
     this.map.on(GoogleMapsEvent.MAP_READY).subscribe(() => {
-      console.log('Map is ready!');
+      let markeroptions: MarkerOptions = {
+        position: this.location,
+        title: 'My Marker',
+        animation: 'DROP'
+      };
+
+      let marker = this.map.addMarker(markeroptions).then((marker: Marker) => {
+        marker.showInfoWindow();
+        console.log('Map is ready!');
+      });
     });
+
+
   }
 
 
-ionViewDidLoad() {
-  console.log('ionViewDidLoad Login');
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad Location');
+  }
 }
 
-}
 
 
 

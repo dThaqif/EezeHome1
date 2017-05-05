@@ -21,6 +21,7 @@
     "@google/maps": "^0.3.1",
     "@ionic-native/camera": "^3.5.0",
     "@ionic-native/core": "^3.6.1",
+    "@ionic-native/firebase": "^3.6.1",
     "@ionic-native/geolocation": "^3.6.1",
     "@ionic-native/google-maps": "^3.6.1",
     "@ionic-native/splash-screen": "3.4.2",
